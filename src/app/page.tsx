@@ -1,120 +1,51 @@
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-//       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-//         <Image
-//           className="dark:invert"
-//           src="/next.svg"
-//           alt="Next.js logo"
-//           width={180}
-//           height={38}
-//           priority
-//         />
-//         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-//           <li className="mb-2 tracking-[-.01em]">
-//             Get started by editing{" "}
-//             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-//               src/app/page.tsx
-//             </code>
-//             .
-//           </li>
-//           <li className="tracking-[-.01em]">
-//             Save and see your changes instantly.
-//           </li>
-//         </ol>
-
-//         <div className="flex gap-4 items-center flex-col sm:flex-row">
-//           <a
-//             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-//             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             <Image
-//               className="dark:invert"
-//               src="/vercel.svg"
-//               alt="Vercel logomark"
-//               width={20}
-//               height={20}
-//             />
-//             Deploy now
-//           </a>
-//           <a
-//             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-//             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Read our docs
-//           </a>
-//         </div>
-//       </main>
-//       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/file.svg"
-//             alt="File icon"
-//             width={16}
-//             height={16}
-//           />
-//           Learn
-//         </a>
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/window.svg"
-//             alt="Window icon"
-//             width={16}
-//             height={16}
-//           />
-//           Examples
-//         </a>
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/globe.svg"
-//             alt="Globe icon"
-//             width={16}
-//             height={16}
-//           />
-//           Go to nextjs.org →
-//         </a>
-//       </footer>
-//     </div>
-//   );
-// }
 'use client'
 
 import { motion } from 'framer-motion'
+import { Mail } from 'lucide-react'
 
 export default function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="p-8"
-    >
-      <h1 className="text-4xl font-bold">Galven Rivera</h1>
-      <p className="mt-4 text-gray-600">Software Developer | Resume Website</p>
-    </motion.div>
+    <main className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-xl text-center"
+      >
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+          Galven Rivera
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+          Software Developer. I am Developer yes. If i were to ask myself what am I, I would say developer probably.
+        </p>
+
+        <div className="flex justify-center gap-4">
+          <a
+            href="mailto:galven.rivera@gmail.com"
+            className="hover:text-blue-500 transition-colors"
+            aria-label="Email"
+          >
+            <Mail className="w-6 h-6" />
+          </a>
+
+          <a
+            href="https://github.com/NotGalliumGa/galven_rivera_site"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-black dark:hover:text-white transition-colors"
+            aria-label="GitHub"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="w-6 h-6"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.385 7.86 10.907.574.107.785-.25.785-.554 0-.274-.01-1.002-.015-1.967-3.197.696-3.872-1.54-3.872-1.54-.522-1.323-1.275-1.675-1.275-1.675-1.042-.712.08-.698.08-.698 1.15.08 1.754 1.182 1.754 1.182 1.024 1.754 2.688 1.247 3.343.954.104-.742.4-1.247.727-1.534-2.553-.29-5.237-1.277-5.237-5.682 0-1.256.448-2.284 1.182-3.09-.12-.288-.513-1.452.112-3.028 0 0 .963-.308 3.157 1.176.914-.254 1.894-.38 2.867-.385.973.005 1.953.13 2.87.385 2.19-1.484 3.15-1.176 3.15-1.176.627 1.576.234 2.74.114 3.028.737.806 1.18 1.834 1.18 3.09 0 4.415-2.688 5.387-5.253 5.672.41.353.772 1.05.772 2.115 0 1.528-.014 2.762-.014 3.14 0 .307.207.665.79.552C20.713 21.38 24 17.084 24 12c0-6.352-5.148-11.5-12-11.5z" />
+            </svg>
+          </a>
+        </div>
+      </motion.div>
+    </main>
   )
 }
