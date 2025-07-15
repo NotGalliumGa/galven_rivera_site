@@ -8,8 +8,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <nav>
-          <Link href="\another">another</Link>
-          <Link href="\about">about</Link>
+          {/* <Link href="\another">another</Link>
+          <Link href="\about">about</Link> */}
         </nav>
         {children}
       </body>
