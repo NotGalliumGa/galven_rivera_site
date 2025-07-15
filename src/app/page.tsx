@@ -190,7 +190,7 @@ export default function Home() {
           </svg>
         </a>
         <a
-          href="https://linkedin.com/in/your-profile"
+          href="https://www.linkedin.com/in/galvenrivera/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-400 transition-colors"
