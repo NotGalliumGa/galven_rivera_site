@@ -151,13 +151,12 @@ export default function Home() {
         {/* Resume Download */}
         <section className="text-center">
           <motion.a
-            href="/resume.pdf"
+            href="/files/resume.pdf"
             download
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1.5, type: 'spring' }}
-            className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-          >
+            className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
             Download Resume <ArrowRight className="ml-2 w-4 h-4" />
           </motion.a>
         </section>
